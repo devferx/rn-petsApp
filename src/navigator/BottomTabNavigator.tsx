@@ -6,6 +6,7 @@ import {HomeScreen} from '../screens/HomeScreen';
 import {MessagesScreen} from '../screens/MessagesScreen';
 import {FavoritePetsScreen} from '../screens/FavoritePetsScreen';
 import {ProfileScreen} from '../screens/ProfileScreen';
+import {colors} from '../styles/colors';
 
 const Tab = createBottomTabNavigator();
 
@@ -14,6 +15,7 @@ export const BottomTabNavigator = () => {
     <Tab.Navigator
       screenOptions={({route}) => ({
         headerShown: false,
+        tabBarActiveTintColor: colors.black,
         tabBarIcon: ({color, size, focused}) => {
           let iconName: string = '';
           switch (route.name) {
