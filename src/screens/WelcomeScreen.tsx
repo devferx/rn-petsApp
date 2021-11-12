@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useRef, useState} from 'react';
 import {
   View,
   Text,
@@ -7,7 +7,7 @@ import {
   TouchableOpacity,
   Dimensions,
 } from 'react-native';
-import Carousel, {Pagination} from 'react-native-snap-carousel';
+import Carousel from 'react-native-snap-carousel';
 import {StackScreenProps} from '@react-navigation/stack';
 
 import {colors} from '../styles/colors';
@@ -20,6 +20,7 @@ interface Props extends StackScreenProps<RootStackScreenParamsList> {}
 
 export const WelcomeScreen = ({navigation}: Props) => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const carouselRef = useRef<Carousel<Slide> | null>(null);
 
   const handleSnapToItem = (index: number) => {
     setActiveIndex(index);
@@ -36,7 +37,10 @@ export const WelcomeScreen = ({navigation}: Props) => {
   );
 
   const handlePress = () => {
-    navigation.navigate('AppScreen');
+    carouselRef.current?.snapToNext();
+    if (welcomeSlides.length - 1 === activeIndex) {
+      navigation.navigate('AppScreen');
+    }
   };
 
   return (
@@ -49,23 +53,17 @@ export const WelcomeScreen = ({navigation}: Props) => {
         itemWidth={screenWidth - 48}
         onSnapToItem={handleSnapToItem}
         layout="default"
-      />
-      <Pagination
-        dotsLength={welcomeSlides.length}
-        activeDotIndex={activeIndex}
+        ref={slide => (carouselRef.current = slide)}
+        lockScrollWhileSnapping={true}
       />
 
-      {welcomeSlides.length - 1 === activeIndex && (
-        <>
-          <View style={styles.sizedBox} />
-          <TouchableOpacity
-            activeOpacity={0.8}
-            style={styles.button}
-            onPress={handlePress}>
-            <Text style={styles.buttonText}>Siguiente</Text>
-          </TouchableOpacity>
-        </>
-      )}
+      <View style={styles.sizedBox} />
+      <TouchableOpacity
+        activeOpacity={0.8}
+        style={styles.button}
+        onPress={handlePress}>
+        <Text style={styles.buttonText}>Siguiente</Text>
+      </TouchableOpacity>
     </View>
   );
 };
