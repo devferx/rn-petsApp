@@ -1,7 +1,10 @@
 import React from 'react';
-import {Text, View, StyleSheet} from 'react-native';
-import {PetSelectButton} from '../components/PetSelectButton';
+import {Text, View, StyleSheet, FlatList} from 'react-native';
 
+import {PetSelectButton} from '../components/PetSelectButton';
+import {PetCard} from '../components/PetCard';
+
+import data from '../data/data';
 import {colors} from '../styles/colors';
 
 export const HomeScreen = () => {
@@ -24,6 +27,15 @@ export const HomeScreen = () => {
           onPress={() => {}}
         />
       </View>
+      <FlatList
+        style={styles.petList}
+        data={data.dogs}
+        keyExtractor={item => item.id}
+        numColumns={2}
+        columnWrapperStyle={styles.petListContent}
+        showsVerticalScrollIndicator={false}
+        renderItem={({item}) => <PetCard style={styles.petCard} pet={item} />}
+      />
     </View>
   );
 };
@@ -54,5 +66,14 @@ const styles = StyleSheet.create({
   },
   firstBtn: {
     marginRight: 8,
+  },
+  petList: {
+    marginTop: 24,
+  },
+  petListContent: {
+    justifyContent: 'space-between',
+  },
+  petCard: {
+    width: '48%',
   },
 });
