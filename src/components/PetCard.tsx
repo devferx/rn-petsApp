@@ -14,6 +14,7 @@ import LinearGradient from 'react-native-linear-gradient';
 
 import {Pet} from '../interfaces/pet';
 import {RootStackScreenParamsList} from '../navigator/Navigator';
+import {fonts} from '../styles/fonts';
 
 interface PetCardProps {
   pet: Pet;
@@ -44,8 +45,12 @@ export const PetCard = ({pet, style}: PetCardProps) => {
         colors={['rgba(255,0,0,0)', 'rgba(0,0,0, 0.5)']}
       />
       <View style={styles.content}>
-        <Text style={[styles.text, styles.textBold]}>{pet.name}</Text>
-        <Text style={[styles.text, styles.textGray]} numberOfLines={1}>
+        <Text style={[fonts.body2Bold, styles.text, styles.textBold]}>
+          {pet.name}
+        </Text>
+        <Text
+          style={[fonts.body2Regular, styles.text, styles.textGray]}
+          numberOfLines={1}>
           {pet.breed}
         </Text>
       </View>
@@ -82,8 +87,6 @@ const styles = StyleSheet.create({
   },
   text: {
     color: 'white',
-    fontSize: 14,
-    lineHeight: 19,
   },
   textBold: {
     fontWeight: 'bold',

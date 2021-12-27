@@ -11,9 +11,10 @@ import {StackScreenProps} from '@react-navigation/stack';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 import {RootStackScreenParamsList} from '../navigator/Navigator';
-import {colors} from '../styles/colors';
 import {GenderIcon} from '../components/Icons';
 import {LikeIcon} from '../components/Icons/LikeIcon';
+import {colors} from '../styles/colors';
+import {fonts} from '../styles/fonts';
 
 interface PetScreenProps
   extends StackScreenProps<RootStackScreenParamsList, 'PetScreen'> {}
@@ -42,7 +43,7 @@ export const PetScreen = ({
 
       <View style={styles.content}>
         <View style={styles.contentHeader}>
-          <Text style={styles.name}>{pet.name}</Text>
+          <Text style={[fonts.headline1, styles.name]}>{pet.name}</Text>
           <GenderIcon gender={pet.gender} />
           <View style={styles.largeSpace} />
           <TouchableOpacity
@@ -56,14 +57,24 @@ export const PetScreen = ({
         <View style={styles.info}>
           <View style={styles.infoItem}>
             <Image source={require('../assets/raza-icon.png')} />
-            <Text style={[styles.infoItemText, styles.textGrey]}>
+            <Text
+              style={[
+                fonts.body2Regular,
+                styles.infoItemText,
+                styles.textGrey,
+              ]}>
               {pet.breed}
             </Text>
           </View>
 
           <View style={styles.infoItem}>
             <Image source={require('../assets/edad-icon.png')} />
-            <Text style={[styles.infoItemText, styles.textGrey]}>
+            <Text
+              style={[
+                fonts.body2Regular,
+                styles.infoItemText,
+                styles.textGrey,
+              ]}>
               {pet.monthsWaiting} Meses
             </Text>
           </View>
@@ -76,12 +87,16 @@ export const PetScreen = ({
             size={24}
             color="#000000"
           />
-          <Text style={[styles.textGrey]}>{pet.address}</Text>
+          <Text style={[fonts.body2Regular, styles.textGrey]}>
+            {pet.address}
+          </Text>
         </View>
 
         <View style={styles.desc}>
-          <Text style={styles.descTitle}>Historia de {pet.name}</Text>
-          <Text style={[styles.descText, styles.textGrey]}>
+          <Text style={[fonts.headline2, styles.descTitle]}>
+            Historia de {pet.name}
+          </Text>
+          <Text style={[fonts.body1Regular, styles.descText, styles.textGrey]}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
             consectetur repellat, autem, assumenda delectus perspiciatis
             blanditiis omnis totam repellendus odit quia, ut aliquam esse minus
@@ -97,17 +112,19 @@ export const PetScreen = ({
             <Image style={styles.userAvatar} source={{uri: pet.authorAvatar}} />
 
             <View>
-              <Text style={[styles.userLabel, styles.textGrey]}>
+              <Text style={[fonts.caption, styles.textGrey]}>
                 Publicado por
               </Text>
-              <Text style={styles.username}>{pet.author}</Text>
+              <Text style={[fonts.body2Bold, styles.username]}>
+                {pet.author}
+              </Text>
             </View>
           </View>
 
           <TouchableOpacity
             style={styles.contactBtn}
             onPress={onPressContactButton}>
-            <Text style={styles.contactBtnText}>Contactar</Text>
+            <Text style={[fonts.button, styles.contactBtnText]}>Contactar</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -161,9 +178,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   name: {
-    fontWeight: '800',
-    fontSize: 24,
-    lineHeight: 33,
     marginRight: 8,
     color: colors.black,
   },
@@ -197,15 +211,10 @@ const styles = StyleSheet.create({
   },
   descTitle: {
     color: colors.black,
-    fontWeight: 'bold',
-    fontSize: 18,
-    lineHeight: 25,
   },
   descText: {
-    fontSize: 16,
-    lineHeight: 24,
-    letterSpacing: 0.005,
     marginTop: 8,
+    letterSpacing: 0.005,
   },
   contact: {
     marginTop: 32,
@@ -224,14 +233,7 @@ const styles = StyleSheet.create({
     borderRadius: 99,
     marginRight: 8,
   },
-  userLabel: {
-    fontSize: 11,
-    lineHeight: 15,
-  },
   username: {
-    fontWeight: 'bold',
-    fontSize: 14,
-    lineHeight: 19,
     color: colors.black,
   },
   contactBtn: {
@@ -243,9 +245,6 @@ const styles = StyleSheet.create({
     marginLeft: 32,
   },
   contactBtnText: {
-    fontSize: 14,
-    lineHeight: 16,
-    fontWeight: '600',
     color: 'white',
     textAlign: 'center',
   },

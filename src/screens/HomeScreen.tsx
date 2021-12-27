@@ -6,6 +6,7 @@ import {PetCard} from '../components/PetCard';
 
 import data from '../data/data';
 import {colors} from '../styles/colors';
+import {fonts} from '../styles/fonts';
 
 export const HomeScreen = () => {
   const [currentList, setCurrentList] = useState<'dogs' | 'cats'>('dogs');
@@ -20,8 +21,12 @@ export const HomeScreen = () => {
       showsVerticalScrollIndicator={false}
       ListHeaderComponent={
         <View style={styles.header}>
-          <Text style={styles.title}>Adopta una adorable mascota</Text>
-          <Text style={styles.text}>Categorías de mascotas</Text>
+          <Text style={[fonts.headline1, styles.title]}>
+            Adopta una adorable mascota
+          </Text>
+          <Text style={[fonts.subtitle1, styles.text]}>
+            Categorías de mascotas
+          </Text>
           <View style={styles.actions}>
             <PetSelectButton
               style={styles.firstBtn}
@@ -50,16 +55,10 @@ const styles = StyleSheet.create({
     marginBottom: 24,
   },
   title: {
-    fontFamily: 'Nunito-ExtraBold',
-    fontSize: 24,
-    lineHeight: 33,
     color: colors.black,
   },
   text: {
     marginTop: 32,
-    fontWeight: '600',
-    fontSize: 18,
-    lineHeight: 24,
     color: colors.black,
   },
   actions: {

@@ -10,9 +10,10 @@ import {
 import Carousel from 'react-native-snap-carousel';
 import {StackScreenProps} from '@react-navigation/stack';
 
-import {colors} from '../styles/colors';
 import {welcomeSlides, Slide} from '../data/welcomeSlides';
 import {RootStackScreenParamsList} from '../navigator/Navigator';
+import {colors} from '../styles/colors';
+import {fonts} from '../styles/fonts';
 
 const {width: screenWidth} = Dimensions.get('window');
 
@@ -30,8 +31,8 @@ export const WelcomeScreen = ({navigation}: Props) => {
     <>
       <Image style={styles.img} source={item.img} resizeMode="contain" />
       <View style={styles.content}>
-        <Text style={styles.title}>{item.title}</Text>
-        <Text style={styles.desc}>{item.desc}</Text>
+        <Text style={[fonts.headline2, styles.title]}>{item.title}</Text>
+        <Text style={[fonts.body1Regular, styles.desc]}>{item.desc}</Text>
       </View>
     </>
   );
@@ -62,7 +63,7 @@ export const WelcomeScreen = ({navigation}: Props) => {
         activeOpacity={0.8}
         style={styles.button}
         onPress={handlePress}>
-        <Text style={styles.buttonText}>Siguiente</Text>
+        <Text style={[fonts.button, styles.buttonText]}>Siguiente</Text>
       </TouchableOpacity>
     </View>
   );
@@ -82,17 +83,13 @@ const styles = StyleSheet.create({
     marginTop: 33,
   },
   title: {
-    fontWeight: 'bold',
     textAlign: 'center',
     color: colors.black,
     marginBottom: 8,
-    fontSize: 18,
   },
   desc: {
     color: colors.grey,
-    lineHeight: 24,
     textAlign: 'center',
-    fontSize: 16,
   },
   sizedBox: {
     flex: 1,
@@ -105,7 +102,6 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     color: colors.white,
-    fontWeight: '600',
     textAlign: 'center',
   },
 });

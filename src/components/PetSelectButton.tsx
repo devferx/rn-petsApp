@@ -16,16 +16,16 @@ interface Props {
   title: string;
   image: ImageSourcePropType;
   petColor: string;
-  onPress: () => void;
   style?: StyleProp<ViewStyle>;
+  onPress: () => void;
 }
 
 export const PetSelectButton = ({
   title,
   image,
   petColor,
-  onPress,
   style,
+  onPress,
 }: Props) => {
   return (
     <TouchableOpacity
@@ -60,8 +60,9 @@ const styles = StyleSheet.create({
   },
   text: {
     color: colors.white,
-    fontWeight: '700',
+    fontFamily: 'Nunito-Bold',
     fontSize: 16,
+    lineHeight: 24,
     marginLeft: 16,
   },
 });
