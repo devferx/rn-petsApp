@@ -1,5 +1,7 @@
 import {StyleSheet} from 'react-native';
 
+import {colors} from './colors';
+
 export const fonts = StyleSheet.create({
   headline1: {
     fontFamily: 'Nunito-ExtraBold',
@@ -40,5 +42,11 @@ export const fonts = StyleSheet.create({
     fontFamily: 'Nunito-Meidum',
     fontSize: 14,
     lineHeight: 16,
+  },
+  textGrey: {
+    color: colors.grey,
+  },
+  textBlack: {
+    color: colors.black,
   },
 });

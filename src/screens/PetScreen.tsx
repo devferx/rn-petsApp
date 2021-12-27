@@ -15,6 +15,7 @@ import {GenderIcon} from '../components/Icons';
 import {LikeIcon} from '../components/Icons/LikeIcon';
 import {colors} from '../styles/colors';
 import {fonts} from '../styles/fonts';
+import {PetPersonalityList} from '../components/PetPersonalityList';
 
 interface PetScreenProps
   extends StackScreenProps<RootStackScreenParamsList, 'PetScreen'> {}
@@ -43,7 +44,9 @@ export const PetScreen = ({
 
       <View style={styles.content}>
         <View style={styles.contentHeader}>
-          <Text style={[fonts.headline1, styles.name]}>{pet.name}</Text>
+          <Text style={[fonts.headline1, fonts.textBlack, styles.name]}>
+            {pet.name}
+          </Text>
           <GenderIcon gender={pet.gender} />
           <View style={styles.largeSpace} />
           <TouchableOpacity
@@ -58,11 +61,7 @@ export const PetScreen = ({
           <View style={styles.infoItem}>
             <Image source={require('../assets/raza-icon.png')} />
             <Text
-              style={[
-                fonts.body2Regular,
-                styles.infoItemText,
-                styles.textGrey,
-              ]}>
+              style={[fonts.body2Regular, fonts.textGrey, styles.infoItemText]}>
               {pet.breed}
             </Text>
           </View>
@@ -70,11 +69,7 @@ export const PetScreen = ({
           <View style={styles.infoItem}>
             <Image source={require('../assets/edad-icon.png')} />
             <Text
-              style={[
-                fonts.body2Regular,
-                styles.infoItemText,
-                styles.textGrey,
-              ]}>
+              style={[fonts.body2Regular, fonts.textGrey, styles.infoItemText]}>
               {pet.monthsWaiting} Meses
             </Text>
           </View>
@@ -87,16 +82,18 @@ export const PetScreen = ({
             size={24}
             color="#000000"
           />
-          <Text style={[fonts.body2Regular, styles.textGrey]}>
+          <Text style={[fonts.body2Regular, fonts.textGrey]}>
             {pet.address}
           </Text>
         </View>
 
+        <PetPersonalityList />
+
         <View style={styles.desc}>
-          <Text style={[fonts.headline2, styles.descTitle]}>
+          <Text style={[fonts.headline2, fonts.textBlack]}>
             Historia de {pet.name}
           </Text>
-          <Text style={[fonts.body1Regular, styles.descText, styles.textGrey]}>
+          <Text style={[fonts.body1Regular, fonts.textGrey, styles.descText]}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
             consectetur repellat, autem, assumenda delectus perspiciatis
             blanditiis omnis totam repellendus odit quia, ut aliquam esse minus
@@ -112,10 +109,8 @@ export const PetScreen = ({
             <Image style={styles.userAvatar} source={{uri: pet.authorAvatar}} />
 
             <View>
-              <Text style={[fonts.caption, styles.textGrey]}>
-                Publicado por
-              </Text>
-              <Text style={[fonts.body2Bold, styles.username]}>
+              <Text style={[fonts.caption, fonts.textGrey]}>Publicado por</Text>
+              <Text style={[fonts.body2Bold, fonts.textBlack]}>
                 {pet.author}
               </Text>
             </View>
@@ -179,7 +174,6 @@ const styles = StyleSheet.create({
   },
   name: {
     marginRight: 8,
-    color: colors.black,
   },
   largeSpace: {
     flex: 1,
@@ -203,14 +197,8 @@ const styles = StyleSheet.create({
   locationIcon: {
     marginRight: 8,
   },
-  textGrey: {
-    color: colors.grey,
-  },
   desc: {
     marginTop: 32,
-  },
-  descTitle: {
-    color: colors.black,
   },
   descText: {
     marginTop: 8,
@@ -232,9 +220,6 @@ const styles = StyleSheet.create({
     borderColor: colors.green,
     borderRadius: 99,
     marginRight: 8,
-  },
-  username: {
-    color: colors.black,
   },
   contactBtn: {
     flex: 1,
