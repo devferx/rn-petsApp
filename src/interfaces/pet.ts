@@ -2,7 +2,7 @@ export interface Pet {
   id: string;
   name: string;
   photo: string;
-  gender: string;
+  gender: 'Male' | 'Female';
   breed: string;
   address: string;
   monthsWaiting: number;

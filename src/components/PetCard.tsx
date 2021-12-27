@@ -8,20 +8,35 @@ import {
   StyleProp,
   ViewStyle,
 } from 'react-native';
+import {StackNavigationProp} from '@react-navigation/stack';
+import {useNavigation} from '@react-navigation/native';
 import LinearGradient from 'react-native-linear-gradient';
 
 import {Pet} from '../interfaces/pet';
+import {RootStackScreenParamsList} from '../navigator/Navigator';
 
 interface PetCardProps {
   pet: Pet;
   style?: StyleProp<ViewStyle>;
 }
 
+type HomeScreenNavigationProp = StackNavigationProp<
+  RootStackScreenParamsList,
+  'AppScreen'
+>;
+
 export const PetCard = ({pet, style}: PetCardProps) => {
+  const navigation = useNavigation<HomeScreenNavigationProp>();
+
+  const handleTap = () => {
+    navigation.navigate('PetScreen', pet);
+  };
+
   return (
     <TouchableOpacity
       style={{...styles.container, ...(style as any)}}
-      activeOpacity={0.8}>
+      activeOpacity={0.8}
+      onPress={handleTap}>
       <Image source={{uri: pet.photo}} style={styles.image} />
       <LinearGradient
         style={styles.gradient}

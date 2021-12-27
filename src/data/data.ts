@@ -10,7 +10,7 @@ const data: DataI = {
     {
       id: '12fed1b7-0773-4a56-978f-39f0e849bd7a',
       name: 'Kenzie',
-      photo: 'http://dummyimage.com/375x442.png/5fa2dd/ffffff',
+      photo: 'https://images.dog.ceo/breeds/labrador/n02099712_2234.jpg',
       gender: 'Male',
       breed: 'Labrador',
       address: '71 Pawling Alley',
@@ -22,7 +22,7 @@ const data: DataI = {
     {
       id: '99cc4c51-b727-424a-b101-2f490fe5e223',
       name: 'Jamie',
-      photo: 'http://dummyimage.com/375x442.png/ff4444/ffffff',
+      photo: 'https://images.dog.ceo/breeds/beagle/n02088364_12124.jpg',
       gender: 'Male',
       breed: 'Beagle',
       address: '427 Brentwood Park',
@@ -34,7 +34,7 @@ const data: DataI = {
     {
       id: 'd8198694-8e4e-43c1-b825-75ea435e9a86',
       name: 'Emerson',
-      photo: 'http://dummyimage.com/375x442.png/dddddd/000000',
+      photo: 'https://images.dog.ceo/breeds/beagle/n02088364_12745.jpg',
       gender: 'Female',
       breed: 'Beagle',
       address: '745 Carpenter Street',
@@ -45,7 +45,7 @@ const data: DataI = {
     {
       id: 'fd762e4b-f497-4b87-8671-04a9a97c6a57',
       name: 'Daryl',
-      photo: 'http://dummyimage.com/375x442.png/cc0000/ffffff',
+      photo: 'https://images.dog.ceo/breeds/bulldog-french/n02108915_5669.jpg',
       gender: 'Male',
       breed: 'French Bulldog',
       address: '88428 Gulseth Junction',
@@ -57,7 +57,7 @@ const data: DataI = {
     {
       id: '430cb883-1a79-425d-97eb-3471fb5b7602',
       name: 'Kenzie',
-      photo: 'http://dummyimage.com/375x442.png/5fa2dd/ffffff',
+      photo: 'https://images.dog.ceo/breeds/bulldog-boston/n02096585_2821.jpg',
       gender: 'Male',
       breed: 'Bulldog',
       address: '835 Packers Drive',
@@ -69,7 +69,7 @@ const data: DataI = {
     {
       id: 'b6f02935-754a-425a-9d26-36f883ac837c',
       name: 'Frankie',
-      photo: 'http://dummyimage.com/375x442.png/cc0000/ffffff',
+      photo: 'https://images.dog.ceo/breeds/germanshepherd/n02106662_855.jpg',
       gender: 'Male',
       breed: 'German Shorthaired',
       address: '13 Arrowood Drive',
@@ -81,7 +81,7 @@ const data: DataI = {
     {
       id: 'e08597b1-0b8a-4c26-a44b-8c0e1cdaeef8',
       name: 'Erin',
-      photo: 'http://dummyimage.com/375x442.png/ff4444/ffffff',
+      photo: 'https://images.dog.ceo/breeds/bulldog-french/n02108915_3083.jpg',
       gender: 'Male',
       breed: 'French Bulldog',
       address: '434 Ridgeview Junction',
@@ -93,7 +93,7 @@ const data: DataI = {
     {
       id: 'cedbc4d6-61f7-406d-9cfb-5aaf33059dbd',
       name: 'Daryl',
-      photo: 'http://dummyimage.com/375x442.png/dddddd/000000',
+      photo: 'https://images.dog.ceo/breeds/corgi-cardigan/n02113186_9000.jpg',
       gender: 'Female',
       breed: 'Pembroke Welsh Corgi',
       address: '85267 Upham Circle',
@@ -105,7 +105,7 @@ const data: DataI = {
     {
       id: '908687cb-de82-4ac0-a5b0-113d46dcd6a9',
       name: 'Jamie',
-      photo: 'http://dummyimage.com/375x442.png/cc0000/ffffff',
+      photo: 'https://images.dog.ceo/breeds/poodle-toy/n02113624_2019.jpg',
       gender: 'Female',
       breed: 'Poodle',
       address: '518 Mesta Alley',
@@ -117,7 +117,7 @@ const data: DataI = {
     {
       id: '430b2778-e678-4f77-acf2-bc75dec90546',
       name: 'Dana',
-      photo: 'http://dummyimage.com/375x442.png/cc0000/ffffff',
+      photo: 'https://images.dog.ceo/breeds/bulldog-french/n02108915_2807.jpg',
       gender: 'Female',
       breed: 'French Bulldog',
       address: '5927 Meadow Vale Junction',
@@ -128,7 +128,7 @@ const data: DataI = {
     {
       id: 'd93c2294-0f60-4bb3-a83a-1511664390d3',
       name: 'Emerson',
-      photo: 'http://dummyimage.com/375x442.png/dddddd/000000',
+      photo: 'https://images.dog.ceo/breeds/corgi-cardigan/n02113186_7220.jpg',
       gender: 'Female',
       breed: 'Pembroke Welsh Corgi',
       address: '6 Bluestem Lane',
@@ -140,7 +140,7 @@ const data: DataI = {
     {
       id: '3b694dc2-7036-4f4d-9a20-4ae9026a3cbd',
       name: 'Devin',
-      photo: 'http://dummyimage.com/375x442.png/5fa2dd/ffffff',
+      photo: 'https://images.dog.ceo/breeds/beagle/n02088364_13477.jpg',
       gender: 'Male',
       breed: 'Beagle',
       address: '3044 1st Street',
@@ -152,7 +152,7 @@ const data: DataI = {
     {
       id: 'c0847488-9ea6-4409-b30d-10135033dd5a',
       name: 'Hayden',
-      photo: 'http://dummyimage.com/375x442.png/dddddd/000000',
+      photo: 'https://images.dog.ceo/breeds/doberman/n02107142_6439.jpg',
       gender: 'Female',
       breed: 'Doberman Pinscher',
       address: '6 Bunker Hill Street',
@@ -164,9 +164,9 @@ const data: DataI = {
     {
       id: 'f481ff50-312f-4cf8-8b2d-15a595b83911',
       name: 'Kai',
-      photo: 'http://dummyimage.com/375x442.png/dddddd/000000',
+      photo: 'https://images.dog.ceo/breeds/pug/django-resized.jpg',
       gender: 'Male',
-      breed: 'Cavalier King Charles Spaniel',
+      breed: 'Pug',
       address: '0011 Westridge Court',
       monthsWaiting: 1,
       author: 'Eryn Lammas',
@@ -176,7 +176,7 @@ const data: DataI = {
     {
       id: 'e39a69ef-6ce9-4ac3-9c90-ed7da5f89004',
       name: 'Devin',
-      photo: 'http://dummyimage.com/375x442.png/ff4444/ffffff',
+      photo: 'https://images.dog.ceo/breeds/germanshepherd/n02106662_4201.jpg',
       gender: 'Female',
       breed: 'German Shepherd Dog',
       address: '8 Fair Oaks Crossing',
@@ -188,7 +188,7 @@ const data: DataI = {
     {
       id: 'f0b967eb-98a3-45f3-82aa-197490d2e7cf',
       name: 'Jayden',
-      photo: 'http://dummyimage.com/375x442.png/ff4444/ffffff',
+      photo: 'https://images.dog.ceo/breeds/husky/n02110185_14594.jpg',
       gender: 'Female',
       breed: 'Siberian Huskie',
       address: '6895 Donald Hill',
@@ -200,7 +200,7 @@ const data: DataI = {
     {
       id: '1d093918-45ea-4f81-abbd-a630f1f63b7a',
       name: 'Cory',
-      photo: 'http://dummyimage.com/375x442.png/cc0000/ffffff',
+      photo: 'https://images.dog.ceo/breeds/germanshepherd/n02106662_808.jpg',
       gender: 'Female',
       breed: 'German Shorthaired',
       address: '5828 Marquette Park',
@@ -212,7 +212,7 @@ const data: DataI = {
     {
       id: '3b94468a-5d89-4fdd-83ed-f14df923977a',
       name: 'Jerry',
-      photo: 'http://dummyimage.com/375x442.png/dddddd/000000',
+      photo: 'https://images.dog.ceo/breeds/husky/n02110185_11409.jpg',
       gender: 'Female',
       breed: 'Siberian Huskie',
       address: '81991 Bayside Pass',
@@ -223,7 +223,7 @@ const data: DataI = {
     {
       id: 'd31141c6-ed57-4ede-9237-4dcf327ca1bc',
       name: 'Hailey',
-      photo: 'http://dummyimage.com/375x442.png/dddddd/000000',
+      photo: 'https://images.dog.ceo/breeds/germanshepherd/n02106662_3116.jpg',
       gender: 'Male',
       breed: 'German Shepherd Dog',
       address: '32 Dunning Place',
@@ -235,7 +235,7 @@ const data: DataI = {
     {
       id: '38175d29-d637-44d4-9c8a-82315c832053',
       name: 'Kenzie',
-      photo: 'http://dummyimage.com/375x442.png/ff4444/ffffff',
+      photo: 'https://images.dog.ceo/breeds/corgi-cardigan/n02113186_11741.jpg',
       gender: 'Male',
       breed: 'Pembroke Welsh Corgi',
       address: '56037 Huxley Point',
@@ -247,7 +247,7 @@ const data: DataI = {
     {
       id: 'c1e4d1c4-765d-4fc7-ab1a-d12f7d829f36',
       name: 'Harper',
-      photo: 'http://dummyimage.com/375x442.png/5fa2dd/ffffff',
+      photo: 'https://images.dog.ceo/breeds/rottweiler/n02106550_982.jpg',
       gender: 'Female',
       breed: 'Rottweiler',
       address: '52173 Lunder Center',
@@ -259,7 +259,8 @@ const data: DataI = {
     {
       id: '339581be-c2c1-47de-ae06-5cc6c4a7e009',
       name: 'Jayden',
-      photo: 'http://dummyimage.com/375x442.png/5fa2dd/ffffff',
+      photo:
+        'https://images.dog.ceo/breeds/terrier-yorkshire/n02094433_3947.jpg',
       gender: 'Male',
       breed: 'Yorkshire Terrier',
       address: '8075 Clarendon Road',
@@ -271,7 +272,8 @@ const data: DataI = {
     {
       id: '81ac3a79-5803-44a2-a2b9-9c1ee5e2d68a',
       name: 'Danny',
-      photo: 'http://dummyimage.com/375x442.png/cc0000/ffffff',
+      photo:
+        'https://images.dog.ceo/breeds/poodle-miniature/n02113712_8473.jpg',
       gender: 'Female',
       breed: 'Poodle',
       address: '214 Saint Paul Place',
@@ -282,7 +284,8 @@ const data: DataI = {
     {
       id: 'f274052b-8db1-4eb2-ba46-dafc88096a06',
       name: 'Jesse',
-      photo: 'http://dummyimage.com/375x442.png/5fa2dd/ffffff',
+      photo:
+        'https://images.dog.ceo/breeds/terrier-yorkshire/n02094433_3640.jpg',
       gender: 'Female',
       breed: 'Yorkshire Terrier',
       address: '3 Basil Junction',
@@ -294,7 +297,7 @@ const data: DataI = {
     {
       id: 'c8df1c4d-6c92-4eb2-a35a-af657e97d14a',
       name: 'Frankie',
-      photo: 'http://dummyimage.com/375x442.png/ff4444/ffffff',
+      photo: 'https://images.dog.ceo/breeds/beagle/n02088364_15036.jpg',
       gender: 'Male',
       breed: 'Beagle',
       address: '953 Johnson Place',
@@ -306,7 +309,7 @@ const data: DataI = {
     {
       id: '636fe35e-6599-4914-9ff7-e0a26e3ba643',
       name: 'Kennedy',
-      photo: 'http://dummyimage.com/375x442.png/5fa2dd/ffffff',
+      photo: 'https://images.dog.ceo/breeds/germanshepherd/n02106662_2058.jpg',
       gender: 'Female',
       breed: 'German Shorthaired',
       address: '0571 Carpenter Alley',
@@ -318,7 +321,8 @@ const data: DataI = {
     {
       id: '119ac67f-ec6e-4964-a3dd-d49aff046ecf',
       name: 'Greer',
-      photo: 'http://dummyimage.com/375x442.png/cc0000/ffffff',
+      photo:
+        'https://images.dog.ceo/breeds/terrier-yorkshire/n02094433_3604.jpg',
       gender: 'Male',
       breed: 'Yorkshire Terrier',
       address: '4066 Caliangt Crossing',
@@ -330,7 +334,8 @@ const data: DataI = {
     {
       id: '7d22cd8d-48d3-49d3-9f61-a18076cbd18f',
       name: 'Harper',
-      photo: 'http://dummyimage.com/375x442.png/5fa2dd/ffffff',
+      photo:
+        'https://images.dog.ceo/breeds/poodle-miniature/n02113712_4170.jpg',
       gender: 'Female',
       breed: 'Poodle',
       address: '46 Kenwood Park',
@@ -342,7 +347,7 @@ const data: DataI = {
     {
       id: 'c093b25c-33e2-4459-91c3-3cc5df0effd5',
       name: 'Harper',
-      photo: 'http://dummyimage.com/375x442.png/5fa2dd/ffffff',
+      photo: 'https://images.dog.ceo/breeds/germanshepherd/n02106662_13380.jpg',
       gender: 'Male',
       breed: 'German Shorthaired',
       address: '3 Linden Trail',
@@ -354,7 +359,7 @@ const data: DataI = {
     {
       id: '9441509a-2885-411a-898a-8426c241706f',
       name: 'Jesse',
-      photo: 'http://dummyimage.com/375x442.png/ff4444/ffffff',
+      photo: 'https://images.dog.ceo/breeds/doberman/n02107142_18196.jpg',
       gender: 'Female',
       breed: 'Doberman Pinscher',
       address: '59311 Manley Place',
@@ -366,7 +371,7 @@ const data: DataI = {
     {
       id: '3973c14c-3468-4438-a3e8-62154dd8f4a0',
       name: 'Claude',
-      photo: 'http://dummyimage.com/375x442.png/ff4444/ffffff',
+      photo: 'https://images.dog.ceo/breeds/doberman/n02107142_16217.jpg',
       gender: 'Female',
       breed: 'Shih Tzu',
       address: '54 Pennsylvania Way',
@@ -378,7 +383,7 @@ const data: DataI = {
     {
       id: 'ecf12cd0-c028-4f3f-84b4-adcf5cadf3de',
       name: 'Hailey',
-      photo: 'http://dummyimage.com/375x442.png/5fa2dd/ffffff',
+      photo: 'https://images.dog.ceo/breeds/bulldog-french/n02108915_12904.jpg',
       gender: 'Female',
       breed: 'French Bulldog',
       address: '58006 Spenser Way',
@@ -390,7 +395,8 @@ const data: DataI = {
     {
       id: 'a1589b0c-9231-4722-a834-170bbd3e3af1',
       name: 'Jamie',
-      photo: 'http://dummyimage.com/375x442.png/cc0000/ffffff',
+      photo:
+        'https://images.dog.ceo/breeds/terrier-yorkshire/n02094433_2223.jpg',
       gender: 'Female',
       breed: 'Yorkshire Terrier',
       address: '23 Superior Place',
@@ -402,7 +408,7 @@ const data: DataI = {
     {
       id: '42b5e4a0-2f5a-48d8-be5b-428848f66c2a',
       name: 'Dana',
-      photo: 'http://dummyimage.com/375x442.png/5fa2dd/ffffff',
+      photo: 'https://images.dog.ceo/breeds/germanshepherd/n02106662_2810.jpg',
       gender: 'Female',
       breed: 'German Shepherd Dog',
       address: '1066 Rusk Street',
@@ -414,7 +420,7 @@ const data: DataI = {
     {
       id: '1d8f8ff5-75e3-4546-8547-dc4be51f3870',
       name: 'Hayden',
-      photo: 'http://dummyimage.com/375x442.png/ff4444/ffffff',
+      photo: 'https://images.dog.ceo/breeds/dachshund/Daschund-2.jpg',
       gender: 'Female',
       breed: 'Dachshund',
       address: '01513 Jackson Avenue',
@@ -426,7 +432,8 @@ const data: DataI = {
     {
       id: '51039dfd-f011-4761-bb16-7972d514f4cb',
       name: 'Kenzie',
-      photo: 'http://dummyimage.com/375x442.png/cc0000/ffffff',
+      photo:
+        'https://images.dog.ceo/breeds/retriever-golden/Z6A_4068_200803.jpg',
       gender: 'Female',
       breed: 'Golden',
       address: '85 Randy Pass',
@@ -438,7 +445,7 @@ const data: DataI = {
     {
       id: '5e394761-7e7c-4cb1-add2-639fa09d2dd4',
       name: 'Kai',
-      photo: 'http://dummyimage.com/375x442.png/5fa2dd/ffffff',
+      photo: 'https://images.dog.ceo/breeds/dachshund/dog-1018408_640.jpg',
       gender: 'Male',
       breed: 'Dachshund',
       address: '44 Hudson Trail',
@@ -450,7 +457,7 @@ const data: DataI = {
     {
       id: '0433f09e-58bc-4d8a-b738-742b9f6c0531',
       name: 'Harley',
-      photo: 'http://dummyimage.com/375x442.png/ff4444/ffffff',
+      photo: 'https://images.dog.ceo/breeds/germanshepherd/n02106662_10676.jpg',
       gender: 'Male',
       breed: 'German Shorthaired',
       address: '39 Waywood Alley',
@@ -461,7 +468,7 @@ const data: DataI = {
     {
       id: '25baf743-688a-4a97-bcaf-e3d543096c44',
       name: 'Greer',
-      photo: 'http://dummyimage.com/375x442.png/cc0000/ffffff',
+      photo: 'https://images.dog.ceo/breeds/corgi-cardigan/n02113186_10972.jpg',
       gender: 'Male',
       breed: 'Pembroke Welsh Corgi',
       address: '9 Daystar Center',
@@ -473,7 +480,7 @@ const data: DataI = {
     {
       id: '15f37e00-c488-4b02-9b07-2420f2743a59',
       name: 'Kennedy',
-      photo: 'http://dummyimage.com/375x442.png/5fa2dd/ffffff',
+      photo: 'https://images.dog.ceo/breeds/doberman/n02107142_6859.jpg',
       gender: 'Male',
       breed: 'Doberman Pinscher',
       address: '341 Helena Point',
@@ -485,7 +492,7 @@ const data: DataI = {
     {
       id: '5059921c-5910-4634-8398-78fba705e729',
       name: 'Kai',
-      photo: 'http://dummyimage.com/375x442.png/5fa2dd/ffffff',
+      photo: 'https://images.dog.ceo/breeds/beagle/n02088364_8871.jpg',
       gender: 'Female',
       breed: 'Beagle',
       address: '9636 Ilene Court',
@@ -497,7 +504,7 @@ const data: DataI = {
     {
       id: '70247320-9226-4f6d-9021-cc6d3f081b45',
       name: 'Jerry',
-      photo: 'http://dummyimage.com/375x442.png/ff4444/ffffff',
+      photo: 'https://images.dog.ceo/breeds/bulldog-boston/n02096585_2180.jpg',
       gender: 'Male',
       breed: 'Bulldog',
       address: '4 Ridge Oak Street',
@@ -509,7 +516,7 @@ const data: DataI = {
     {
       id: '6ff0d67c-fbfa-444c-8e70-ced6971d4868',
       name: 'Harper',
-      photo: 'http://dummyimage.com/375x442.png/cc0000/ffffff',
+      photo: 'https://images.dog.ceo/breeds/shihtzu/n02086240_5696.jpg',
       gender: 'Male',
       breed: 'Shih Tzu',
       address: '3 School Pass',
@@ -521,7 +528,7 @@ const data: DataI = {
     {
       id: '687c93ed-4ee0-4c4d-9bda-3e797999058e',
       name: 'Jayden',
-      photo: 'http://dummyimage.com/375x442.png/5fa2dd/ffffff',
+      photo: 'https://images.dog.ceo/breeds/germanshepherd/n02106662_18922.jpg',
       gender: 'Male',
       breed: 'German Shepherd Dog',
       address: '7 Portage Place',
@@ -533,7 +540,7 @@ const data: DataI = {
     {
       id: '9d3c00f4-625a-4d89-a6b6-5e3f523be2b9',
       name: 'Harper',
-      photo: 'http://dummyimage.com/375x442.png/5fa2dd/ffffff',
+      photo: 'https://images.dog.ceo/breeds/shihtzu/n02086240_5976.jpg',
       gender: 'Female',
       breed: 'Shih Tzu',
       address: '4 Green Ridge Pass',
@@ -545,7 +552,7 @@ const data: DataI = {
     {
       id: '9033b97e-01ff-4886-ab90-0692c7a70a0c',
       name: 'Greer',
-      photo: 'http://dummyimage.com/375x442.png/dddddd/000000',
+      photo: 'https://images.dog.ceo/breeds/bulldog-boston/n02096585_1668.jpg',
       gender: 'Male',
       breed: 'Bulldog',
       address: '09833 Harper Hill',
@@ -557,7 +564,7 @@ const data: DataI = {
     {
       id: '46815903-8878-4830-9706-3addc71c62aa',
       name: 'Kenzie',
-      photo: 'http://dummyimage.com/375x442.png/5fa2dd/ffffff',
+      photo: 'https://images.dog.ceo/breeds/husky/n02110185_10849.jpg',
       gender: 'Male',
       breed: 'Siberian Huskie',
       address: '4391 Katie Road',
@@ -569,7 +576,8 @@ const data: DataI = {
     {
       id: '443429aa-4f65-47c3-9ac5-1d8ce9a1c6fc',
       name: 'Hayden',
-      photo: 'http://dummyimage.com/375x442.png/ff4444/ffffff',
+      photo:
+        'https://images.dog.ceo/breeds/terrier-yorkshire/n02094433_2197.jpg',
       gender: 'Female',
       breed: 'Yorkshire Terrier',
       address: '1460 Red Cloud Drive',
@@ -581,7 +589,7 @@ const data: DataI = {
     {
       id: '16b3a245-c690-4ad2-9acf-8b604301bb83',
       name: 'Jerry',
-      photo: 'http://dummyimage.com/375x442.png/5fa2dd/ffffff',
+      photo: 'https://images.dog.ceo/breeds/germanshepherd/n02106662_20711.jpg',
       gender: 'Male',
       breed: 'German Shepherd Dog',
       address: '0 Caliangt Trail',
@@ -592,7 +600,8 @@ const data: DataI = {
     {
       id: 'c719e73b-ab9c-4d24-b1f2-77dc33bed5e2',
       name: 'Frankie',
-      photo: 'http://dummyimage.com/375x442.png/5fa2dd/ffffff',
+      photo:
+        'https://images.dog.ceo/breeds/terrier-yorkshire/n02094433_1030.jpg',
       gender: 'Female',
       breed: 'Yorkshire Terrier',
       address: '65 Dennis Center',
