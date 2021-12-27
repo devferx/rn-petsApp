@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Text, View, StyleSheet, FlatList} from 'react-native';
 
 import {PetSelectButton} from '../components/PetSelectButton';
@@ -8,47 +8,49 @@ import data from '../data/data';
 import {colors} from '../styles/colors';
 
 export const HomeScreen = () => {
+  const [currentList, setCurrentList] = useState<'dogs' | 'cats'>('dogs');
+
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Adopta una adorable mascota</Text>
-      <Text style={styles.text}>Categorías de mascotas</Text>
-      <View style={styles.actions}>
-        <PetSelectButton
-          title="Perros"
-          image={require('../assets/dog-icon.png')}
-          petColor={colors.green}
-          onPress={() => {}}
-          style={styles.firstBtn}
-        />
-        <PetSelectButton
-          title="Gatos"
-          image={require('../assets/cat-icon.png')}
-          petColor={colors.blue}
-          onPress={() => {}}
-        />
-      </View>
-      <FlatList
-        style={styles.petList}
-        data={data.dogs}
-        keyExtractor={item => item.id}
-        numColumns={2}
-        columnWrapperStyle={styles.petListContent}
-        showsVerticalScrollIndicator={false}
-        renderItem={({item}) => <PetCard style={styles.petCard} pet={item} />}
-      />
-    </View>
+    <FlatList
+      style={styles.petList}
+      data={data[currentList]}
+      keyExtractor={item => item.id}
+      numColumns={2}
+      columnWrapperStyle={styles.petListContent}
+      showsVerticalScrollIndicator={false}
+      ListHeaderComponent={
+        <View style={styles.header}>
+          <Text style={styles.title}>Adopta una adorable mascota</Text>
+          <Text style={styles.text}>Categorías de mascotas</Text>
+          <View style={styles.actions}>
+            <PetSelectButton
+              style={styles.firstBtn}
+              title="Perros"
+              image={require('../assets/dog-icon.png')}
+              petColor={colors.green}
+              onPress={() => setCurrentList('dogs')}
+            />
+            <PetSelectButton
+              title="Gatos"
+              image={require('../assets/cat-icon.png')}
+              petColor={colors.blue}
+              onPress={() => setCurrentList('cats')}
+            />
+          </View>
+        </View>
+      }
+      renderItem={({item}) => <PetCard style={styles.petCard} pet={item} />}
+    />
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: colors.primary,
-    paddingHorizontal: 24,
-    paddingTop: 48,
+  header: {
+    marginTop: 48,
+    marginBottom: 24,
   },
   title: {
-    fontWeight: '800',
+    fontFamily: 'Nunito-ExtraBold',
     fontSize: 24,
     lineHeight: 33,
     color: colors.black,
@@ -68,7 +70,9 @@ const styles = StyleSheet.create({
     marginRight: 8,
   },
   petList: {
-    marginTop: 24,
+    flex: 1,
+    backgroundColor: colors.primary,
+    paddingHorizontal: 24,
   },
   petListContent: {
     justifyContent: 'space-between',
