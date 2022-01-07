@@ -63,7 +63,7 @@ export const AppProvider = ({children}: AppProviderProps) => {
   return (
     <AppContext.Provider
       value={{
-        favoritesPets: [],
+        favoritesPets: favorites,
         showWelcomeSlides,
         turnOffWelcomeSlides,
         addFavoritePet,
