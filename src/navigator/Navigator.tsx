@@ -14,7 +14,7 @@ export type RootStackScreenParamsList = {
   WelcomeScreen: undefined;
   AppScreen: undefined;
   PetScreen: Pet;
-  ChatScreen: undefined;
+  ChatScreen: Pet;
 };
 
 const Stack = createStackNavigator<RootStackScreenParamsList>();

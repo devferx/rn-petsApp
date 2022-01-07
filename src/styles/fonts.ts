@@ -23,6 +23,11 @@ export const fonts = StyleSheet.create({
     fontSize: 16,
     lineHeight: 24,
   },
+  body1Bold: {
+    fontFamily: 'Nunito-Bold',
+    fontSize: 16,
+    lineHeight: 24,
+  },
   body2Regular: {
     fontFamily: 'Nunito-Regular',
     fontSize: 14,

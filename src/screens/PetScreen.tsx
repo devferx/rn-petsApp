@@ -34,7 +34,7 @@ export const PetScreen = ({
   }, [isFavoritePet, pet]);
 
   const onPressContactButton = () => {
-    navigation.navigate('ChatScreen');
+    navigation.navigate('ChatScreen', pet);
   };
 
   const onPressBackButton = () => {
