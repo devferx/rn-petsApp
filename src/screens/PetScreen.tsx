@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import {
   Image,
   StyleSheet,
@@ -10,12 +10,13 @@ import {
 import {StackScreenProps} from '@react-navigation/stack';
 import Icon from 'react-native-vector-icons/Ionicons';
 
+import {AppContext} from '../context/AppContext';
 import {RootStackScreenParamsList} from '../navigator/Navigator';
+import {PetPersonalityList} from '../components/PetPersonalityList';
 import {GenderIcon} from '../components/Icons';
 import {LikeIcon} from '../components/Icons/LikeIcon';
 import {colors} from '../styles/colors';
 import {fonts} from '../styles/fonts';
-import {PetPersonalityList} from '../components/PetPersonalityList';
 
 interface PetScreenProps
   extends StackScreenProps<RootStackScreenParamsList, 'PetScreen'> {}
@@ -25,6 +26,12 @@ export const PetScreen = ({
   route: {params: pet},
 }: PetScreenProps) => {
   const [like, setLike] = useState(false);
+  const {isFavoritePet, addFavoritePet, deleteFavoritePet} =
+    useContext(AppContext);
+
+  useEffect(() => {
+    setLike(isFavoritePet(pet));
+  }, [isFavoritePet, pet]);
 
   const onPressContactButton = () => {
     navigation.navigate('ChatScreen');
@@ -32,6 +39,11 @@ export const PetScreen = ({
 
   const onPressBackButton = () => {
     navigation.goBack();
+  };
+
+  const handlePressLikeButton = () => {
+    setLike(!like);
+    like ? deleteFavoritePet(pet) : addFavoritePet(pet);
   };
 
   return (
@@ -52,7 +64,7 @@ export const PetScreen = ({
           <TouchableOpacity
             style={styles.likeButton}
             activeOpacity={0.7}
-            onPress={() => setLike(!like)}>
+            onPress={handlePressLikeButton}>
             <LikeIcon isLiked={like} />
           </TouchableOpacity>
         </View>

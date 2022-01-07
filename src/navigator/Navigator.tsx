@@ -1,5 +1,7 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
+
+import {AppContext} from '../context/AppContext';
 
 import {WelcomeScreen} from '../screens/WelcomeScreen';
 import {BottomTabNavigator} from './BottomTabNavigator';
@@ -18,12 +20,15 @@ export type RootStackScreenParamsList = {
 const Stack = createStackNavigator<RootStackScreenParamsList>();
 
 export const Navigator = () => {
+  const {showWelcomeSlides} = useContext(AppContext);
   return (
     <Stack.Navigator
       screenOptions={{
         headerShown: false,
       }}>
-      <Stack.Screen name="WelcomeScreen" component={WelcomeScreen} />
+      {showWelcomeSlides && (
+        <Stack.Screen name="WelcomeScreen" component={WelcomeScreen} />
+      )}
       <Stack.Screen name="AppScreen" component={BottomTabNavigator} />
       <Stack.Screen name="PetScreen" component={PetScreen} />
       <Stack.Screen name="ChatScreen" component={ChatScreen} />

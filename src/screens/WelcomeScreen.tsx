@@ -1,4 +1,4 @@
-import React, {useRef, useState} from 'react';
+import React, {useContext, useRef, useState} from 'react';
 import {
   View,
   Text,
@@ -10,8 +10,11 @@ import {
 import Carousel from 'react-native-snap-carousel';
 import {StackScreenProps} from '@react-navigation/stack';
 
+import {AppContext} from '../context/AppContext';
+
 import {welcomeSlides, Slide} from '../data/welcomeSlides';
 import {RootStackScreenParamsList} from '../navigator/Navigator';
+
 import {colors} from '../styles/colors';
 import {fonts} from '../styles/fonts';
 
@@ -22,6 +25,7 @@ interface Props extends StackScreenProps<RootStackScreenParamsList> {}
 export const WelcomeScreen = ({navigation}: Props) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const carouselRef = useRef<Carousel<Slide> | null>(null);
+  const {turnOffWelcomeSlides} = useContext(AppContext);
 
   const handleSnapToItem = (index: number) => {
     setActiveIndex(index);
@@ -40,6 +44,7 @@ export const WelcomeScreen = ({navigation}: Props) => {
   const handlePress = () => {
     carouselRef.current?.snapToNext();
     if (welcomeSlides.length - 1 === activeIndex) {
+      turnOffWelcomeSlides();
       navigation.navigate('AppScreen');
     }
   };
