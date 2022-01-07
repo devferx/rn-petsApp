@@ -39,7 +39,7 @@ export const fonts = StyleSheet.create({
     lineHeight: 15,
   },
   button: {
-    fontFamily: 'Nunito-Meidum',
+    fontFamily: 'Nunito-SemiBold',
     fontSize: 14,
     lineHeight: 16,
   },
